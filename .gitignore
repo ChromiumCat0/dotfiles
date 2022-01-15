@@ -1,0 +1,17 @@
+cef_user_data/
+Code/
+discord/
+discordcanary/
+QtProject.conf
+mimeapps.list
+Google/
+configstore/
+dconf/
+flutter/
+gh/
+jgit/
+lunarclient/
+NuGet/
+onlyoffice/
+yay/
+pulse/
