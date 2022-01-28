@@ -1,0 +1,95 @@
+configuration {
+	modi:					"drun";
+	font:					"Source Code Pro 10";
+	show-icons:				false;
+	icon-theme: 			"Papirus Dark";
+	display-drun: 			"";
+	drun-display-format:	"{name}";
+	sidebar-mode:			false;
+}
+
+* {
+	bg:						#1A1826;
+	fg:						#D9E0EE;
+	accent:					#F5C2E7;
+	button:					#575268;
+
+	background-color:		@bg;
+	text-color:				@fg;
+}
+
+window {
+	border-radius:			7px;
+	width:			    	30%;
+	padding:				32px;
+	background-color:		@bg;
+}
+
+prompt {
+	background-color:		@button;
+	enabled:				true;
+	padding:				0.5% 32px 0% -0.5%;
+	font:					"Source Code Pro 10";
+}
+
+entry {
+    	placeholder:			"Search";
+	background-color:               @button;
+	text-color:			@fg;
+    	expand:                         true;
+    	padding:                        0.15% 0% 0% 0%;
+}
+
+inputbar {
+	children:			[ prompt, entry ];
+    	background-color:               @button;
+    	expand:                         false;
+    	border-radius:                  6px;
+    	margin:                         0%;
+    	padding:                        10px;
+	text-color:			@fg;
+}
+
+listview {
+    	columns:                        1;
+    	lines:	                        6;
+    	cycle:                          false;
+    	dynamic:                        true;
+    	layout:                         vertical;
+}
+
+mainbox {
+    	children:                       [ inputbar, listview ];
+    	spacing:                       	2%;
+    	padding:                        2% 1% 2% 1%;
+}
+
+element {
+	padding: 8px;
+}
+
+element normal, element normal.active, element normal.normal, element alternate.normal, element alternate.active, element alternate {
+    	orientation:                    vertical;
+    	padding:                        2% 0% 2% 0%;
+	background-color:		@bg;
+	text-color:			@fg;
+}
+
+element-text {
+    	expand:                         true;
+    	horizontal-align:               0.5;
+    	vertical-align:                 0.5;
+    	margin:                         0.5% 0.5% -0.5% 0.5%;
+	text-color: @fg;
+}
+
+element-text, element-icon {
+	background-color:		inherit;
+	text-color:			inherit;
+}
+
+element selected.active, element selected.normal, element selected {
+    	background-color:		@accent;
+    	border-radius:                  6px;
+	text-color:			@bg;
+}

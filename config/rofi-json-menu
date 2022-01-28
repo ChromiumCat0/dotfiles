@@ -1,0 +1,11 @@
+{
+	"Shutdown": {
+		"cmd": "sudo poweroff now"
+	},
+	"Reboot": {
+		"cmd": "sudo reboot"
+	},
+	"Exit i3": {
+		"cmd": "killall -p \"i3\""
+	}
+}
